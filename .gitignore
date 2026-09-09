@@ -1,0 +1,7 @@
+# macOS Finder artifacts
+.DS_Store
+
+# The workspace's list for this folder's card — the board reads it, the published
+# repository never carries it (the user's ruling, 2026-09-10: only the finished
+# site is published).
+TODO.md
