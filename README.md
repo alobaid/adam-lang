@@ -6,6 +6,17 @@
 
 ---
 
+## Acknowledgement
+
+First and foremost, I would like to express my profound gratitude to God for giving me and everyone
+who worked on this project the will, power, and knowledge to see this project through, for it was
+truly and only by the grace, mercy, and blessing of God that this work came to light.
+
+I would also like to extend my sincere thanks to everyone who worked on this project, for your
+effort, support, and dedication were invaluable. I also would like to note that anything achieved
+correctly was solely by the grace of God, and any shortcomings, errors, mistakes, and all otherwise
+are entirely my own and on me to blame; may God forgive us for our mistakes.
+
 Most languages keep a program as text in one human language, and rebuild everything from that text every time. Adam keeps a program as a list of **digests**. One digest is one thing the program does. It holds no word at all: a number that stands for the thing, and the machine's own instruction for it, already written, with gaps left for the values the program supplies.
 
 Because the bytes are already inside the digests, the stored file is one fill away from running. A keystroke writes a value into a gap. There is no source file to parse, no tool to run, and nothing reading the program while it runs.
@@ -170,11 +181,9 @@ The page is generated. Its head says so: the sources are `shell/` and `sections/
 - The bytes on the site are x86-64. Other machines run through the Rust road today and get their own tables as they are measured.
 - The measurements the speed figures rest on were taken on 2026-09-08 with Go 1.27.1 and rustc 1.97.1, and the public Benchmarks Game record read the same day.
 
-## Acknowledgements
+## Credits
 
 The site's face is [Lilex](https://github.com/mishamyrt/Lilex) (SIL OFL 1.1, Mikhail Panfilov), patched with [Nerd Fonts](https://www.nerdfonts.com/) glyphs (MIT, Ryan L McIntyre), with icons from [Lucide](https://lucide.dev/) (ISC, Lucide Contributors).
-
-The author's own words, from the page's first and last lines: anything achieved correctly here was by the grace of God; the shortcomings are the author's own.
 
 ## License
 
