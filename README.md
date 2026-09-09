@@ -110,61 +110,6 @@ Any programming language can join. It writes its own forms of the words against 
 
 **Qalam** is the editor Adam is written in. It keeps the sheet of words each reader uses, and it fills a gap the moment a line is written.
 
-## Standing on shoulders
-
-Adam is written in the debt of four languages, and says so before anything else.
-
-| language | what it gave |
-|---|---|
-| **C** | the ceiling: how fast a program can run, and machine instructions in readable words |
-| **Ruby** | the ear: a language can bend to the sentence, and reading a program can be a pleasure |
-| **Rust** | safety at the ceiling; Rust's compiler is the witness of every one of Adam's words |
-| **Go** | the small language and concurrency; Go is the way in for every word |
-
-What Adam adds is not a better version of their work. It is a change to where the work happens.
-
-## The site
-
-Everything above is shown, not told, on one page.
-
-| # | section |
-|---|---|
-| 1 | Acknowledgement |
-| 2 | The idea in one figure |
-| 3 | Adam beside friends |
-| 4 | The words are yours |
-| 5 | If a program asks for 8 + 3 |
-| 6 | Where a digest's bytes come from |
-| 7 | How a word is proved |
-| 8 | Every machine, every language |
-| 9 | The claim |
-
-Sections 5 and 6 go all the way down: what a machine does with `8 + 3`, the three instructions it becomes, the twelve bytes, what an assembler does to get there, and how Adam skips that road by keeping the bytes in the digest.
-
-The page is one file with no external requests. The typeface is embedded whole, so it reads the same offline, from a USB stick, or from any static host. Four themes are on the bar: **day**, **night**, **light**, and **green**. Every figure that lights on hover also lights on focus, and every pin works from the keyboard.
-
-### Open it
-
-Double-click `index.html`, or serve the folder:
-
-```bash
-python3 -m http.server 8000
-```
-
-Then visit `http://localhost:8000`.
-
-### Run the 110-byte program
-
-Section 2 has a **download it and run it** link. It hands you `adam-lang.am`, a macOS x86-64 executable: the 46 bytes of the program plus the header the system puts around every one.
-
-```bash
-chmod +x adam-lang.am
-xattr -d com.apple.quarantine adam-lang.am
-./adam-lang.am
-```
-
-A file a browser downloads is quarantined, and macOS will not run one nobody has signed until you say so. The second line is how you say so; **Open Anyway** under Privacy & Security does the same. It prints `Adam Lang`.
-
 ## Repository layout
 
 ```text
