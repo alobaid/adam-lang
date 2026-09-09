@@ -17,6 +17,8 @@ are entirely my own and on me to blame; may God forgive us for our mistakes.
 
 `v0.9.9` · no compiler, no interpreter · every tongue
 
+**The site: [alobaid.github.io/adam-lang](https://alobaid.github.io/adam-lang/)**
+
 Most languages keep a program as text in one human language, and rebuild everything from that text every time. Adam keeps a program as a list of **digests**. One digest is one thing the program does. It holds no word at all: a number that stands for the thing, and the machine's own instruction for it, already written, with gaps left for the values the program supplies.
 
 Because the bytes are already inside the digests, the stored file is one fill away from running. A keystroke writes a value into a gap. There is no source file to parse, no tool to run, and nothing reading the program while it runs.
