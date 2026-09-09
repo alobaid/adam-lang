@@ -1,11 +1,3 @@
-# Adam
-
-**A programming language with Rust's safety and Go's concurrency, written in any human tongue, that runs at the keystroke with nothing compiled and nothing interpreted.**
-
-`v0.9.9` · no compiler, no interpreter · every tongue
-
----
-
 ## Acknowledgement
 
 First and foremost, I would like to express my profound gratitude to God for giving me and everyone
@@ -22,6 +14,14 @@ Most languages keep a program as text in one human language, and rebuild everyth
 Because the bytes are already inside the digests, the stored file is one fill away from running. A keystroke writes a value into a gap. There is no source file to parse, no tool to run, and nothing reading the program while it runs.
 
 This repository is the Adam site: a single self-contained `index.html` that explains the idea with real bytes, real programs, and figures you can hover, tap, and pin.
+
+---
+
+# Adam
+
+**A programming language with Rust's safety and Go's concurrency, written in any human tongue, that runs at the keystroke with nothing compiled and nothing interpreted.**
+
+`v0.9.9` · no compiler, no interpreter · every tongue
 
 ## The idea in one figure
 
