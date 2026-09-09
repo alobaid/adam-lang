@@ -2,7 +2,7 @@
 
 **A programming language with Rust's safety and Go's concurrency, written in any human tongue, that runs at the keystroke with nothing compiled and nothing interpreted.**
 
-`v0.9.9` · one page, nine sections · no compiler, no interpreter · every tongue
+`v0.9.9` · no compiler, no interpreter · every tongue
 
 ---
 
