@@ -1,4 +1,8 @@
 <!doctype html>
+<!-- © 2026 Talal Alobaid. All rights reserved.
+     Type embedded in this page: Lilex (SIL OFL 1.1, Mikhail Panfilov) with Nerd Fonts glyphs (MIT)
+     and Lucide icons (ISC); IBM Plex Sans, Figtree, Lexend, Montserrat, Noto Kufi Arabic and
+     Noto Sans Mono (SIL OFL 1.1). -->
 <html lang="en">
 <head>
 <meta charset="utf-8">
@@ -997,6 +1001,11 @@ details.fold > figure { margin-top: 14px; }
 .brand { font-size: 13px; font-weight: 600; color: var(--comment); letter-spacing: .02em; white-space: nowrap; justify-self: center; }
 .brand .ver { font-weight: 400; font-size: 11.5px; color: var(--comment); margin-left: 3px; }
 .menu { position: relative; }
+/* The colophon at the foot of the page: the copyright, once; the type credit the fonts'
+   licences ask for lives in the comment at the top of the file, for whoever opens the source (the user's word, 2026-09-09:
+   "add it to the footer of the site"). Written once in shell/foot.html. */
+.colophon { max-width: 800px; margin: 0 auto; padding: 24px 24px 40px; border-top: 1px solid var(--border); color: var(--comment); font-size: 12px; line-height: 1.7; }
+.colophon p { margin: 0; max-width: none; }
 .menubar .menu:not(.left) { justify-self: end; }
 /* The sections, on the bar's left: the font's lucide_menu glyph, U+E115, opens the
    list of the page's sections — written by build.rb for each page it builds, since
@@ -3444,6 +3453,10 @@ twelve    bytes: two of them are the operation <em>put a constant in a register<
   own.</p>
 </section>
 </main>
+
+<footer class="colophon">
+  <p>© 2026 Talal Alobaid. All rights reserved.</p>
+</footer>
 
 <script>
 // The menus on the bar. Each .menu is an icon and a dropdown: the icon opens
