@@ -9,12 +9,6 @@ effort, support, and dedication were invaluable. I also would like to note that 
 correctly was solely by the grace of God, and any shortcomings, errors, mistakes, and all otherwise
 are entirely my own and on me to blame; may God forgive us for our mistakes.
 
-Most languages keep a program as text in one human language, and rebuild everything from that text every time. Adam keeps a program as a list of **digests**. One digest is one thing the program does. It holds no word at all: a number that stands for the thing, and the machine's own instruction for it, already written, with gaps left for the values the program supplies.
-
-Because the bytes are already inside the digests, the stored file is one fill away from running. A keystroke writes a value into a gap. There is no source file to parse, no tool to run, and nothing reading the program while it runs.
-
-This repository is the Adam site: a single self-contained `index.html` that explains the idea with real bytes, real programs, and figures you can hover, tap, and pin.
-
 ---
 
 # Adam
@@ -22,6 +16,12 @@ This repository is the Adam site: a single self-contained `index.html` that expl
 **A programming language with Rust's safety and Go's concurrency, written in any human tongue, that runs at the keystroke with nothing compiled and nothing interpreted.**
 
 `v0.9.9` · no compiler, no interpreter · every tongue
+
+Most languages keep a program as text in one human language, and rebuild everything from that text every time. Adam keeps a program as a list of **digests**. One digest is one thing the program does. It holds no word at all: a number that stands for the thing, and the machine's own instruction for it, already written, with gaps left for the values the program supplies.
+
+Because the bytes are already inside the digests, the stored file is one fill away from running. A keystroke writes a value into a gap. There is no source file to parse, no tool to run, and nothing reading the program while it runs.
+
+This repository is the Adam site: a single self-contained `index.html` that explains the idea with real bytes, real programs, and figures you can hover, tap, and pin.
 
 ## The idea in one figure
 
