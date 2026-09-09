@@ -178,4 +178,4 @@ The author's own words, from the page's first and last lines: anything achieved 
 
 ## License
 
-No license file is included yet. The embedded font and icons carry their own licenses, listed above.
+Copyright (c) 2026 Talal Alobaid. All Rights Reserved. See [LICENSE](LICENSE). The embedded font and icons carry their own licenses, listed above.
