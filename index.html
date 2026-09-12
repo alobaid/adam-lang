@@ -995,9 +995,9 @@ details.fold > figure { margin-top: 14px; }
    "menu bar at the top with one drop down icon for the themes"). */
 .menubar { position: fixed; top: 0; left: 0; right: 0; height: 38px; z-index: 5; display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; padding: 0 14px;
            background: var(--panel); border-bottom: 1px solid var(--border); }
-/* The brand in the middle of the bar, all in the quiet grey: the name, and the version read from project.json by the
+/* The brand in the middle of the bar, all in the quiet grey: the name, and Adam's version read from VERSION by the
    builder into the mark — one place for the number (the user's ask, 2026-09-09: "on the
-   menu put Adam v0.9.9"). */
+   menu put Adam v0.9.9"). The manifest's `version` is the workspace's project number, never this one. */
 .brand { font-size: 13px; font-weight: 600; color: var(--comment); letter-spacing: .02em; white-space: nowrap; justify-self: center; }
 .brand .ver { font-weight: 400; font-size: 11.5px; color: var(--comment); margin-left: 3px; }
 .menu { position: relative; }
@@ -1472,6 +1472,23 @@ figcaption .hi, .how .hi, .gate .hi, .stp .hi, .regpop .hi, .bytepop .hi { font-
 <!-- approved: 2026-09-08 -->
 <section id="the-idea">
   <h2><span class="n">2 ·</span>The idea in one figure</h2>
+
+  <p><strong>What this page is.</strong> Adam is one tool in a set — a harness, an editor, and other tools
+  beside them — which the author is building for one project, an operating system, and every part of that
+  set is to be built — God willing and only by the grace of God — in the Adam programming language.
+  <strong class="hi">This page documents the idea</strong>, and shows enough of the implementation to give a
+  reader an idea and a feel of what is to come, and it is to be read with that in mind.</p>
+
+  <p>Three facts about this page, before the figure. <span class="pr">The page is tested</span>: its claims are
+  put to the same tools any reader has, Claude Fable 5.1 among them. The author anticipated some or most of
+  the objections a reader might raise, and milestones remain before the set is whole; every objection is
+  either answered on the page or left out on purpose. The page states less than its author knows, and the difference is
+  <strong class="hi">withheld by choice, not by doubt</strong> — what is stated is stated as fact, to the best of
+  the author's understanding today, and what is left out is left out deliberately. The author reads and
+  writes Arabic and English only; every other tongue on this page was reached through tools, so
+  <strong class="hi">a reader who has one of those tongues should judge the potential in their language, not
+  the author's rendering of it</strong>. Adam is at version 0.9.9, before its first release; this page is its
+  record to date.</p>
 
   <p>A program is usually stored as the words one person typed, in one language, and everything
   else is worked out again every time the program is built. Adam stores something else: a list of
@@ -2124,6 +2141,14 @@ Twelve of the surfaces are human languages and two are programming languages, wh
     instruction is the machine's own, waiting only for the number this program supplies — here,
     ten: the nine characters and the line break after them.</figcaption>
   </figure>
+
+  <p><strong>The order of the work.</strong> One digest is the unit that can be finished and proved on
+  its own, and the figures above show that unit complete: its identity, its bytes, its run. <strong
+  class="hi">A program of digests is the next problem, taken after it</strong> — a digest being right does
+  not by itself make a program of digests right, in behaviour or in speed, and the page does not say
+  otherwise. Until then, programs run on Adam's second road: the digests written out in a language that
+  has joined and built by that language's compiler, at that language's own speed, while the first road,
+  the bytes patched, is proved one digest at a time.</p>
 </section>
 
 <!-- section: 3 · Adam beside friends -->
@@ -2495,6 +2520,17 @@ Twelve of the surfaces are human languages and two are programming languages, wh
     picked the other. Most languages have some version of this. <strong class="hi">The flex above is the thing they do
     not have</strong>.</figcaption>
   </figure>
+
+  <p>None of this is localisation, and none of it is projectional editing. A localised program, a
+  program rendered per reader by a tool such as JetBrains MPS or Intentional Programming, or a definition
+  that Unison stores by its content and names apart from it, <strong>swaps one fixed word for another fixed
+  word inside one syntax</strong>: the reader still meets the language's words, in the language's order, in
+  the tongue the tool was given. That is the change above, and it is not the flex. Over the same stored
+  digest, <em>please could you print the quote "Adam Lang"</em>, <em>"Adam Lang" is the string I would like
+  you to print</em> and <em>print "Adam Lang"</em> are one program — and so is any sentence a reader would
+  rather write, in any of the world's languages, with the words they choose, at the length they choose, in
+  the order they choose. <strong class="hi">A word swapped for another word is a change, and many tools have
+  it. A sentence of the reader's own, in any tongue, over bytes that run, has not been done before</strong>.</p>
 
   <p>The flex is also how <em>much</em> one of those words covers. The last section showed one word
   standing for five stored digests; a reader who would rather see each digest on its own can have that
@@ -3197,11 +3233,16 @@ twelve    bytes: two of them are the operation <em>put a constant in a register<
 
   <p>A digest's bytes are for one kind of machine. The bytes on this site are for the common desktop
   processor, and a phone's processor reads different ones; a table of bytes for
-  each machine is <span class="recall" tabindex="0" data-peek="peek-8a">measured digest by digest, assembled twice</span>. But there is a second way to run the same
-  program that needs no table at all: the digests are written out as Rust, and <strong class="hi">Rust's compiler already
-  targets every machine anyone runs</strong>. So an Adam program runs on all of them the day the list is
-  crossed. Go gives the same on the way in: its compiler runs on every machine, so a word's answer
-  can be made on any of them.</p>
+  each machine is <span class="recall" tabindex="0" data-peek="peek-8a">measured digest by digest, assembled twice</span>. Adam has a second road to a running program, and it
+  needs no table: the digests are written out in the forms a joined language proved in the rounds — Rust's
+  today — and built by that language's compiler, which <strong class="hi">already targets every machine anyone
+  runs</strong>. So an Adam program runs on all of them the day the list is crossed. This road takes the
+  compiler's steps, so it is the slower of the two to a running program; <strong class="hi">slower is measured
+  against Adam's one step and against nothing else</strong>. What it produces is that language's own build,
+  running at that language's speed — Rust's, here — for every word on the list. It is the road Adam's
+  programs run on today, on every machine, while each machine's table of bytes is measured and proved.
+  Go gives the same on the way in: its compiler runs on every machine, so a word's answer can be made on
+  any of them.</p>
   <div class="peek" id="peek-8a"><div class="peeknote">shown again · click the words to keep it open</div>
 <div class="twice">
   <div class="h">the operation</div><div class="h">its bytes</div><div class="h n">count</div>
@@ -3234,9 +3275,11 @@ twelve    bytes: two of them are the operation <em>put a constant in a register<
         </div>
       </div>
     </div>
-    <figcaption>The patched run is one machine at a time. The Rust run needs no table: Rust's
-    compiler already targets every machine anyone runs, so an Adam program runs on all of them the
-    day the list is crossed.</figcaption>
+    <figcaption>Adam's two roads. The patched run is Adam's own: one step, one machine at a time, that
+    machine's bytes. The written-out run needs no table: the compiler of the language the digests are
+    written out in targets every machine anyone runs, so an Adam program runs on all of them the day the
+    list is crossed, at that language's own speed. <strong class="hi">The second is slower only beside the
+    first</strong>.</figcaption>
   </figure>
 
   <figure>
@@ -3431,6 +3474,9 @@ twelve    bytes: two of them are the operation <em>put a constant in a register<
     <div class="who"><b>Speed.</b>
       <p><span class="edge">At the keystroke, no build, it runs. Nothing compiled, nothing interpreted.</span></p>
       <p><span class="recall" tabindex="0" data-peek="peek-9c">A keystroke fills the gap</span>.</p>
+      <p>Until every machine's table of bytes is proved, a program runs by the second road — the same
+      digests written out and built by Rust's compiler — at Rust's speed; slower than the one step,
+      and than nothing else.</p>
       <div class="peek" id="peek-9c"><div class="peeknote">shown again · click the words to keep it open</div>
 <div class="flow">
   <div class="col">
