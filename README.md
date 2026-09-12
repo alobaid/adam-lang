@@ -19,6 +19,10 @@ are entirely my own and on me to blame; may God forgive us for our mistakes.
 
 **The site: [adam-lang.com](https://adam-lang.com/)**
 
+**What this is.** Adam is one tool in a set — a harness, an editor, and other tools beside them — which the author is building for one project, an operating system which is a hobby project for educational purposes, and every part of that set is to be built — God willing and only by the grace of God — in the Adam programming language. The site documents the idea, and shows enough of the implementation to give a reader an idea and a feel of what is to come, and it is to be read with that in mind.
+
+Three facts about the site. **It is tested**: its claims are put to the same tools any reader has, Claude Fable 5.1 among them. The author anticipated some or most of the objections a reader might raise, and milestones remain before the set is whole; every objection is either answered on the page or left out on purpose. **It states less than its author knows**, and the difference is withheld by choice, not by doubt — what is stated is stated as fact, to the best of the author's understanding today, and what is left out is left out deliberately. **The author reads and writes Arabic and English only**; every other tongue on the page was reached through tools, so a reader who has one of those tongues should judge the potential in their language, not the author's rendering of it. Adam is at version 0.9.9, before its first release; the site is a snapshot of Adam at that version.
+
 Most languages keep a program as text in one human language, and rebuild everything from that text every time. Adam keeps a program as a list of **digests**. One digest is one thing the program does. It holds no word at all: a number that stands for the thing, and the machine's own instruction for it, already written, with gaps left for the values the program supplies.
 
 Because the bytes are already inside the digests, the stored file is one fill away from running. A keystroke writes a value into a gap. There is no source file to parse, no tool to run, and nothing reading the program while it runs.
@@ -51,7 +55,7 @@ Adam is three things, each with its reason on the line.
 
 - **Every tongue.** Any human language, any words of any length, in any order. The stored file is digests, and what a reader sees is their own surface drawn from them.
 - **Safety and concurrency.** Rust's safety and Go's concurrency, at the keystroke. Each digest's meaning was fixed once, when Rust's compiler and Go's agreed on it, so the properties belong to the digests before there is a program.
-- **Speed.** At the keystroke, no build, it runs. Every digest was looked up and packed once, the day its word was proved. A program is a choice of digests, and each keystroke fills what a digest left open.
+- **Speed.** At the keystroke, no build, it runs. Nothing compiled, nothing interpreted: a digest carries the machine's own bytes, and a keystroke fills the gap. Until every machine's table of bytes is proved, a program runs by the second road — the same digests written out and built by Rust's compiler — at Rust's speed; slower than the one step, and than nothing else.
 
 ## The words are yours
 
@@ -79,6 +83,8 @@ adding the two numbers 8 and 3 together
 
 Three of those eight words are the program. The rest end at your screen. They are not stored, not carried anywhere, and not looked at when the program runs.
 
+None of this is localisation, and none of it is projectional editing. A localised program, a program rendered per reader by a tool such as JetBrains MPS or Intentional Programming, or a definition that Unison stores by its content and names apart from it, swaps one fixed word for another fixed word inside one syntax: the reader still meets the language's words, in the language's order, in the tongue the tool was given. Over the same stored digest, *please could you print the quote "Adam Lang"*, *"Adam Lang" is the string I would like you to print* and *print "Adam Lang"* are one program — and so is any sentence a reader would rather write, in any of the world's languages. A word swapped for another word is a change, and many tools have it. A sentence of the reader's own, in any tongue, over bytes that run, has not been done before.
+
 This matters because a fixed order and fixed word lengths are not neutral. They are one language's shape, and every reader of a differently shaped language pays for it: Arabic and Urdu run right to left, Japanese and Korean put the verb last, Russian moves words freely for emphasis, German makes one word where English wants four, and Chinese does the whole operation in one character between the values. Adam has no fixed shape, so none of them pay.
 
 ## How a word is proved
@@ -97,16 +103,16 @@ Go's form goes in as that digest. That digest comes out as Rust's form. Two fini
 
 A round can end four ways: the outputs are equal and the digest is made; the outputs differ and the disagreement is recorded, never argued; the form uses something Adam refuses on purpose, such as a thread that starts itself or a hidden pointer, and the refusal is recorded with its reason; or nothing rules the word yet, and that is a finding for the list. Two things never happen: the language is never widened to make a word cross, and the list is never run in one go.
 
-**The list** is one hundred and three words, chosen by one test: enough to write the software that sits closest to the machine. A driver, a tool, a script that moves bytes and prints. A vocabulary that carries that carries everyday programming with room to spare. The finished language is larger and comes later; nothing on the site waits on it.
+**The list** is one hundred and three words, chosen by one test: enough to write the software that sits closest to the machine. A driver, a tool, a script that moves bytes and prints. A vocabulary that carries everyday programming with room to spare. The finished language is larger and comes later; nothing on the site waits on it.
 
 After the list, Go's work is done. A program written from those words is stored as digests, patched to bytes, and runs. Neither Go nor Rust is in the picture any more.
 
 ## Every machine, every language
 
-A digest's bytes are for one kind of machine. The bytes on the site are for the common desktop processor. There are two ways to run the same program elsewhere:
+A digest's bytes are for one kind of machine. The bytes on the site are for the common desktop processor. Adam has two roads to a running program:
 
-- **The patched run.** A table of bytes for the new machine, measured digest by digest and proved the way the words were, by comparison.
-- **The Rust run.** The digests are written out as Rust and handed to `rustc`, which already targets every machine anyone runs. This needs no table, and it is the answer every new machine's table is checked against.
+- **The patched run — Adam's own.** One step, one machine at a time, that machine's bytes: a table measured digest by digest and proved the way the words were, by comparison.
+- **The written-out run — the second road.** The digests are written out in the forms a joined language proved in the rounds — Rust's today — and built by that language's compiler, which already targets every machine anyone runs. It needs no table, and it is the answer every new machine's table is checked against. It takes the compiler's steps, so it is the slower of the two to a running program; slower is measured against Adam's one step and against nothing else. What it produces is that language's own build, running at that language's speed, for every word on the list. It is the road Adam's programs run on today, on every machine, while each machine's table of bytes is measured and proved.
 
 Any programming language can join. It writes its own forms of the words against the answers the rounds already hold, and brings its own parser. Its programs then get what Adam's get: stored as digests, patched to bytes, running with no compiler and no interpreter.
 
@@ -119,7 +125,7 @@ adam-lang/
 └── index.html   the whole site, built
 ```
 
-The page is generated. Its head says so: the sources are `shell/` and `sections/`, and `ruby build.rb` writes this file. Those sources are not in this repository yet, so treat `index.html` as an artifact rather than something to edit by hand.
+The page is generated. Its head says so: the sources are `shell/` and `sections/`, and `ruby build.rb` writes this file. Those sources live in a separate build repository, by design, so treat `index.html` as an artifact rather than something to edit by hand.
 
 ## Status
 
