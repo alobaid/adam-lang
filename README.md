@@ -134,6 +134,10 @@ The page is generated. Its head says so: the sources are `shell/` and `sections/
 - The bytes on the site are x86-64. Other machines run through the Rust road today and get their own tables as they are measured.
 - The measurements the speed figures rest on were taken on 2026-09-08 with Go 1.27.1 and rustc 1.97.1, and the public Benchmarks Game record read the same day.
 
+## Last but not least
+
+I would like to thank Anthropic for the amazing job they did with Fable 5 and 5.1, and with all their other models: they are among the first tools I reach for in my workflow, and a real time saver for anyone who truly cares about time.
+
 ## Credits
 
 The site's face is [Lilex](https://github.com/mishamyrt/Lilex) (SIL OFL 1.1, Mikhail Panfilov), patched with [Nerd Fonts](https://www.nerdfonts.com/) glyphs (MIT, Ryan L McIntyre), with icons from [Lucide](https://lucide.dev/) (ISC, Lucide Contributors).
