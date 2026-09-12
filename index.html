@@ -357,6 +357,13 @@ h2 {
 }
 h2 .n { color: var(--const); margin-inline-end: .6em; }
 p { margin: 0 0 18px; color: var(--text); }
+/* The prose is justified (the user's word, 2026-09-12: "justify"): a section's own
+   paragraphs and the captions. Nothing inside a figure's drawing takes it — stages,
+   strips, sheets, panels, hovers and code keep the alignment their own rules set —
+   and neither do the credit cards, whose columns are too narrow to justify without
+   rivers; so this names the two prose containers and never `p` at large. A
+   paragraph's last line stays ragged, as print sets it. */
+section > p, figcaption { text-align: justify; text-align-last: start; }
 figure + p { margin-top: 24px; }
 p:last-child { margin-bottom: 0; }
 
@@ -441,6 +448,9 @@ figcaption {
 .read .lat { direction: ltr; unicode-bidi: isolate; }
 
 @media (max-width: 700px) {
+  /* Justified prose on a phone's column opens gaps between words; hyphenation
+     closes them. Only the two justified containers take it, and only here. */
+  section > p, figcaption { -webkit-hyphens: auto; hyphens: auto; }
   .forms, .reads { grid-template-columns: 1fr; }
   .rowfig { grid-template-columns: 1fr; }
   .rowfig .cell { border-left-width: 1px; border-radius: 0; }
@@ -1474,8 +1484,8 @@ figcaption .hi, .how .hi, .gate .hi, .stp .hi, .regpop .hi, .bytepop .hi { font-
   <h2><span class="n">2 ·</span>The idea in one figure</h2>
 
   <p><strong>What this page is.</strong> Adam is one tool in a set — a harness, an editor, and other tools
-  beside them — which the author is building for one project, an operating system, and every part of that
-  set is to be built — God willing and only by the grace of God — in the Adam programming language.
+  beside them — which the author is building for one project, an operating system which is a hobby project
+  for educational purposes, and every part of that set is to be built — God willing and only by the grace of God — in the Adam programming language.
   <strong class="hi">This page documents the idea</strong>, and shows enough of the implementation to give a
   reader an idea and a feel of what is to come, and it is to be read with that in mind.</p>
 
@@ -1487,8 +1497,7 @@ figcaption .hi, .how .hi, .gate .hi, .stp .hi, .regpop .hi, .bytepop .hi { font-
   the author's understanding today, and what is left out is left out deliberately. The author reads and
   writes Arabic and English only; every other tongue on this page was reached through tools, so
   <strong class="hi">a reader who has one of those tongues should judge the potential in their language, not
-  the author's rendering of it</strong>. Adam is at version 0.9.9, before its first release; this page is its
-  record to date.</p>
+  the author's rendering of it</strong>. Adam is at version 0.9.9, before its first release; this page is a snapshot of Adam at that version.</p>
 
   <p>A program is usually stored as the words one person typed, in one language, and everything
   else is worked out again every time the program is built. Adam stores something else: a list of
