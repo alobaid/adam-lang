@@ -6,9 +6,7 @@
 # site is published).
 TODO.md
 
-# The workspace's manifest for this folder's card, and its link to the workspace's
-# permissions — both the Oasis workspace's own, never public (the user's ruling,
-# 2026-09-12). The manifest was tracked from 2026-09-10 to this commit and is
-# still in that history.
+# The workspace's manifest for this folder's card — the Oasis workspace's own, never
+# public (the user's ruling, 2026-09-12). It was tracked from 2026-09-10 to 34ebbdf
+# and is still in that history.
 project.json
-.claude/
